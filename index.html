@@ -44,8 +44,6 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
-    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -55,12 +53,12 @@
 <body>
     <!--  Clickcease.com tracking-->
     <script type='text/javascript'>var script = document.createElement('script');
-    script.async = true; script.type = 'text/javascript';
-    var target = 'https://www.clickcease.com/monitor/stat.js';
-    script.src = target;var elem = document.head;elem.appendChild(script);
+        script.async = true; script.type = 'text/javascript';
+        var target = 'https://www.clickcease.com/monitor/stat.js';
+        script.src = target;var elem = document.head;elem.appendChild(script);
     </script>
     <noscript>
-    <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
+        <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
     </noscript>
     <!--  Clickcease.com tracking-->
 
@@ -93,36 +91,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 header-body">
-                        <h1>Have your skip delivered within 24 hours anywhere in the UK</h1>
-                        <p>* subject to availability</p>
-                        <a class="typeform-share btn btn-conf btn-green text-center"
-                            href="https://form.typeform.com/to/mM8Zbj?typeform-medium=embed-snippet" data-mode="popup"
-                            data-size="100" target="_blank">
-                            Book a Skip
-                        </a>
-                        <a href="#contact">
-                            <button class="btn btn-conf btn-clear">Contact Us</button>
-                        </a>
-                    </div>
+                    <h1>Have your skip delivered within 24 hours anywhere in the UK</h1>
+                    <p>* subject to availability</p>
+                    <a class="btn btn-conf btn-green text-center" href="#skip">
+                        Book a Skip
+                    </a>
+                    <a href="#contact">
+                        <button class="btn btn-conf btn-clear">Contact Us</button>
+                    </a>
                 </div>
-            </div><!-- /.container -->
+            </div>
+            </div>
         </div>
     </div>
     <!--/H -->
-
-    <script type="module">
-        import { h, Component, render } from 'https://unpkg.com/preact?module';
-        import htm from 'https://unpkg.com/htm?module';
-      
-        // Initialize htm with Preact
-        const html = htm.bind(h);
-      
-        function App (props) {
-          return html`<h1>Hello ${props.name}!</h1>`;
-        }
-      
-        render(html`<${App} name="World" />`, document.body);
-    </script>
 
     <div id="skip">
         <div class="container">
@@ -138,69 +120,83 @@
                 <br>
                 <br>
                 <div class="text-center w-100">
-                    <div id="formio"></div>
-                    <!-- <a class="typeform-share btn btn-conf btn-green"
-                        href="https://form.typeform.com/to/mM8Zbj?typeform-medium=embed-snippet" data-mode="popup"
-                        data-size="100" target="_blank">
-                        Book a Skip
-                    </a> -->
-                    <form if="form" class="needs-validation" novalidate>
-                        <div class="form-row">
-                          <div class="col-md-6 mb-3">
-                            <label for="validationCustom01">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01" required>
-                            <div class="invalid-feedback">
-                                Field required
-                            </div>
-                          </div>
-                          <div class="col-md-6 mb-3">
-                            <label for="validationCustom02">Last name</label>
-                            <input type="text" class="form-control" id="validationCustom02" required>
-                            <div class="invalid-feedback">
-                                Field required
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-row">
-                          <div class="col-md-6 mb-3">
-                            <label for="validationCustom03">City</label>
-                            <input type="text" class="form-control" id="validationCustom03" required>
-                            <div class="invalid-feedback">
-                              Field required
-                            </div>
-                          </div>
-                          <div class="col-md-3 mb-3">
-                            <label for="validationCustom04">State</label>
-                            <select class="custom-select" id="validationCustom04" required>
-                              <option selected disabled value="">Choose...</option>
-                              <option>...</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Field required
-                              </div>
-                          </div>
-                          <div class="col-md-3 mb-3">
-                            <label for="validationCustom05">Zip</label>
-                            <input type="text" class="form-control" id="validationCustom05" required>
-                            <div class="invalid-feedback">
-                              Field required
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                              Agree to terms and conditions
-                            </label>
-                            <div class="invalid-feedback">
-                              You must agree before submitting.
-                            </div>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Submit form</button>
-                      </form>
+                    <div class="row wrap"><div class="col-lg-12">
+
+                        <div id='progress'><div id='progress-complete'></div></div>
                     
+                        <form id="SignupForm" action="" method="post">
+                    
+                            <fieldset class="d-flex flex-row">
+                                <div class="skip-image">
+                                    <img src="./assets/img/skips/four-yard.png" />
+                                    <button id="4yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                </div>
+                                <div class="skip-image">
+                                    <img src="./assets/img/skips/six-yard.png" />
+                                    <button id="6yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                </div>
+                                <div class="skip-image">
+                                    <img src="./assets/img/skips/eight-yard.png" />
+                                    <button id="8yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                </div>
+                                <div class="skip-image">
+                                    <img src="./assets/img/skips/twelve-yard.png" />
+                                    <button id="12yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                </div>
+                            </fieldset>
+                    
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="wasteType" class="col-sm-2 control-label">Waste type</label>
+                                    <select id="wasteType" class="form-control">
+                                        <option value="mixed">Mixed Waste</option>
+                                        <option value="inert">Inert - Bricks / Rubble / Concrete / Soil</option>
+                                        <option value="garden">Garden Waste and Shrubbery</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="skipDate">Skip's Delivery Date</label>
+                                    <input id="skipDate" name="skipDate" class="form-control" required />
+                                </div>
+                            </fieldset>
+                    
+                            <fieldset>
+                                <legend>Skip's Delivery Address</legend>
+                                <div class="form-group">
+                                    <label for="address1">Address 1</label>
+                                    <input id="address1" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="address2">Address 2</label>
+                                    <input id="address2" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input id="city" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="county">County</label>
+                                    <input id="county" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="postcode">Post Code</label>
+                                    <input id="postcode" type="text" class="form-control" />
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Quote Summary</legend>
+                                <h5 class="mt-4">Great that will be <b id="totalPrice"></b></h5>
+                            </fieldset>
+                            <div class="spinner-border text-primary" 
+                                id="spinner" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <button id="saveAccount" type="submit" class="btn btn-primary submit">Submit form</button>                    
+                        </form>
+                    
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -248,11 +244,6 @@
 
     <div id="grey">
         <div class="container">
-            <!-- <div class="row justify-content-center mb-4">
-				<div class="col-md-6 col-md-offset-3">
-					<h3>Reviews</h3>
-				</div>
-			</div> -->
             <div class="row justify-content-center">
                 <div class="col-md-6 col-md-offset-3 centered">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -549,25 +540,13 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-5 d-flex justify-content-center">
-            <div class="text-center w-100">
-                <a class="typeform-share btn btn-conf btn-green"
-                    href="https://form.typeform.com/to/mM8Zbj?typeform-medium=embed-snippet" data-mode="popup"
-                    data-size="100" target="_blank">
-                    Book a Skip
-                </a>
-            </div>
-        </div>
     </div>
 
     <div id="contact">
         <div class="container">
             <div class="row mb-4">
                 <h1>Contact Us</h1>
-                <div class="typeform-widget"
-                    data-url="https://form.typeform.com/to/Mr6pNK?typeform-medium=embed-snippet"
-                    style="width: 100%; height: 350px;"></div>
-                <script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script>
+                TODO
             </div>
         </div>
     </div>
@@ -577,11 +556,6 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <h5 class="mb-4">info@skiptyskiphire.com | 01256 643 641</h5>
-                    <!-- <p class="mt">
-						<a href="#"><i class="ion-social-twitter"></i></a>
-						<a href="#"><i class="ion-social-instagram"></i></a>
-						<a href="#"><i class="ion-social-dribbble"></i></a>
-					</p> -->
                     <small>SkiptySkip is a trading entity of FEAM Ltd, Company Number 11127035 registered in England &
                         Wales.</small>
                     <p>
@@ -595,14 +569,23 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/retina-1.1.0.js"></script>
+        crossorigin="anonymous" defer></script>
+    <!-- <script src="assets/js/retina-1.1.0.js" defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js" defer></script>
+    <script src="assets/js/jquery.formtowizard.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" defer></script>
+    <script src="./assets/js/survey-form.js" defer></script>
+    <script type="text/javascript" src="https://checkoutpage.co/js/overlay.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </body>
 
 <!-- Modals -->
@@ -1492,5 +1475,4 @@
         </div>
     </div>
 </div>
-<script src="./assets/js/survey-form.js"></script>
 </html>

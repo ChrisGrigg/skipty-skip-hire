@@ -272,6 +272,15 @@ input {
     margin-bottom: 10px;
 }
 
+#skip .skip-image {
+    width: 250px;
+}
+
+#skip .yard-button {
+    position: relative;
+    bottom: 80px;
+}
+
 #about {
 	padding: 50px 15px;
 	background: #F9CD48;
@@ -387,3 +396,14 @@ h2.bold {
 .modal ul {
 	margin-left: 1rem;
 }
+
+
+/***** form to wizard ****/
+.wrap { max-width: 980px; margin: 10px auto 0; }
+#steps { margin: 80px 0 0 0 }
+.commands { overflow: hidden; margin-top: 30px; }
+.prev {float:left}
+.next, .submit, #spinner {float:right}
+.error { color: #b33; }
+#progress { position: relative; height: 5px; background-color: #eee; margin-bottom: 20px; }
+#progress-complete { border: 0; position: absolute; height: 5px; min-width: 10px; background-color: #337ab7; transition: width .2s ease-in-out; }
