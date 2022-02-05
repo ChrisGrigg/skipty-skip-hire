@@ -3,29 +3,51 @@
 
   let price = 0;
 
-  // *** form to wizard *** //
-  var $signupForm = $("#SignupForm");
-
+  // ********** form to wizard ********** //
+  const $signupForm = $("#signupForm");
   $signupForm.validate({
     errorElement: "em",
-    submitHandler: function () {
+    submitHandler: function (form) {
       showSpinner();
       const formData = new FormData();
-      //   formData.append(
-      //     "wasteType",
-      //     document.querySelector('select[name="wasteType"]').value
-      //   );
+      formData.append(
+        "wasteType",
+        document.querySelector('select[name="wasteType"]').value
+      );
       formData.append(
         "skipDate",
         document.querySelector('input[name="skipDate"]').value
+      );
+      formData.append(
+        "address1",
+        document.querySelector('input[name="address1"]').value
+      );
+      formData.append(
+        "address2",
+        document.querySelector('input[name="address2"]').value
+      );
+      formData.append(
+        "city",
+        document.querySelector('input[name="city"]').value
+      );
+      formData.append(
+        "county",
+        document.querySelector('input[name="county"]').value
+      );
+      formData.append(
+        "postCode",
+        document.querySelector('input[name="postCode"]').value
+      );
+      formData.append(
+        "totalPrice",
+        price
       );
 
       fetch("https://getform.io/f/115e7883-4e74-42b6-9f18-0591443cb828", {
         method: "POST",
         body: formData,
       })
-        .then((response) => {
-          console.log(response);
+        .then(() => {
           hideSpinner();
           if (
             typeof window !== "undefined" &&
@@ -37,11 +59,13 @@
               query: { testing: "1" },
             });
           }
-          // form.submit();
+          document.getElementById('signupForm').reset();
+          // $("#signUpAlert").show();
         })
         .catch((error) => console.error(error));
     },
   });
+  // $("#signUpAlert").hide();
 
   $signupForm.formToWizard({
     submitButton: "saveAccount",
@@ -97,4 +121,54 @@
     document.getElementById("spinner").style.display = "block";
   }
   hideSpinner();
+
+  // ********** contact us form ********** //
+  const $contactForm = $("#contactForm");
+  $contactForm.validate({
+    errorElement: "em",
+    submitHandler: function () {
+      const formData = new FormData();
+      formData.append(
+        "fullName",
+        document.querySelector('input[name="contactUsFullName"]').value
+      );
+      formData.append(
+        "email",
+        document.querySelector('input[name="contactUsEmail"]').value
+      );
+      formData.append(
+        "message",
+        document.querySelector('textarea[name="contactUsMessage"]').value
+      );
+
+      fetch("https://getform.io/f/115e7883-4e74-42b6-9f18-0591443cb828", {
+        method: "POST",
+        body: formData,
+      })
+        .then(() => {
+          $("#contactUsAlert").show();
+          document.getElementById('contactForm').reset();
+        })
+        .catch((error) => console.error(error));
+    },
+  });
+
+  $contactForm.formToWizard({
+    submitButton: "submitContactUs",
+    buttonTag: "button",
+    validateBeforeNext: function (form, step) {
+      var stepIsValid = true;
+      var validator = form.validate();
+      $(":input", step).each(function (index) {
+        var xy = validator.element(this);
+        stepIsValid = stepIsValid && (typeof xy == "undefined" || xy);
+      });
+      return stepIsValid;
+    },
+    progress: function (i, count) {
+      $("#progress-complete").width("" + (i / count) * 100 + "%");
+    },
+  });
+
+  $("#contactUsAlert").hide();
 })();

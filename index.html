@@ -120,80 +120,83 @@
                 <br>
                 <br>
                 <div class="text-center w-100">
-                    <div class="row wrap"><div class="col-lg-12">
+                    <div class="row wrap">
+                        <div class="col-lg-12">
 
-                        <div id='progress'><div id='progress-complete'></div></div>
-                    
-                        <form id="SignupForm" action="" method="post">
-                    
-                            <fieldset class="d-flex flex-row">
-                                <div class="skip-image">
-                                    <img src="./assets/img/skips/four-yard.png" />
-                                    <button id="4yard" href="#" class="btn btn-primary yard-button">Select</button>
-                                </div>
-                                <div class="skip-image">
-                                    <img src="./assets/img/skips/six-yard.png" />
-                                    <button id="6yard" href="#" class="btn btn-primary yard-button">Select</button>
-                                </div>
-                                <div class="skip-image">
-                                    <img src="./assets/img/skips/eight-yard.png" />
-                                    <button id="8yard" href="#" class="btn btn-primary yard-button">Select</button>
-                                </div>
-                                <div class="skip-image">
-                                    <img src="./assets/img/skips/twelve-yard.png" />
-                                    <button id="12yard" href="#" class="btn btn-primary yard-button">Select</button>
-                                </div>
-                            </fieldset>
-                    
-                            <fieldset>
-                                <div class="form-group">
-                                    <label for="wasteType" class="col-sm-2 control-label">Waste type</label>
-                                    <select id="wasteType" class="form-control">
-                                        <option value="mixed">Mixed Waste</option>
-                                        <option value="inert">Inert - Bricks / Rubble / Concrete / Soil</option>
-                                        <option value="garden">Garden Waste and Shrubbery</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="skipDate">Skip's Delivery Date</label>
-                                    <input id="skipDate" name="skipDate" class="form-control" required />
-                                </div>
-                            </fieldset>
-                    
-                            <fieldset>
-                                <legend>Skip's Delivery Address</legend>
-                                <div class="form-group">
-                                    <label for="address1">Address 1</label>
-                                    <input id="address1" type="text" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="address2">Address 2</label>
-                                    <input id="address2" type="text" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input id="city" type="text" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="county">County</label>
-                                    <input id="county" type="text" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="postcode">Post Code</label>
-                                    <input id="postcode" type="text" class="form-control" />
-                                </div>
-                            </fieldset>
+                            <div id='progress'><div id='progress-complete'></div></div>
+                            <!-- <div id="signUpAlert" class="alert alert-success" role="alert">
+                                Thanks, we'll be in touch soon.
+                            </div> -->
+                            <form id="signupForm" action="" method="post">
+                        
+                                <fieldset class="d-flex flex-row">
+                                    <div class="skip-image">
+                                        <img src="./assets/img/skips/four-yard.png" />
+                                        <button id="4yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                    </div>
+                                    <div class="skip-image">
+                                        <img src="./assets/img/skips/six-yard.png" />
+                                        <button id="6yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                    </div>
+                                    <div class="skip-image">
+                                        <img src="./assets/img/skips/eight-yard.png" />
+                                        <button id="8yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                    </div>
+                                    <div class="skip-image">
+                                        <img src="./assets/img/skips/twelve-yard.png" />
+                                        <button id="12yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                    </div>
+                                </fieldset>
+                        
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label for="wasteType" class="col-sm-2 control-label">Waste type</label>
+                                        <select id="wasteType" name="wasteType" class="form-control">
+                                            <option value="mixed">Mixed Waste</option>
+                                            <option value="inert">Inert - Bricks / Rubble / Concrete / Soil</option>
+                                            <option value="garden">Garden Waste and Shrubbery</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="skipDate">Skip's Delivery Date</label>
+                                        <input id="skipDate" name="skipDate" class="form-control" required />
+                                    </div>
+                                </fieldset>
+                        
+                                <fieldset>
+                                    <legend>Skip's Delivery Address</legend>
+                                    <div class="form-group">
+                                        <label for="address1">Address 1</label>
+                                        <input id="address1" name="address1" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address2">Address 2</label>
+                                        <input id="address2" name="address2" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input id="city" name="city" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="county">County</label>
+                                        <input id="county" name="county" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postcode">Post Code</label>
+                                        <input id="postcode" name="postCode" type="text" class="form-control" required />
+                                    </div>
+                                </fieldset>
 
-                            <fieldset>
-                                <legend>Quote Summary</legend>
-                                <h5 class="mt-4">Great that will be <b id="totalPrice"></b></h5>
-                            </fieldset>
-                            <div class="spinner-border text-primary" 
-                                id="spinner" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                            <button id="saveAccount" type="submit" class="btn btn-primary submit">Submit form</button>                    
-                        </form>
+                                <fieldset>
+                                    <legend>Quote Summary</legend>
+                                    <h5 class="mt-4">Great that will be <b id="totalPrice"></b></h5>
+                                </fieldset>
+                                <div class="spinner-border text-primary" 
+                                    id="spinner" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <button id="saveAccount" type="submit" class="btn btn-primary submit">Submit form</button>                    
+                            </form>
                     
                         </div>
                     </div>
@@ -546,7 +549,33 @@
         <div class="container">
             <div class="row mb-4">
                 <h1>Contact Us</h1>
-                TODO
+                <div class="text-center w-100">
+                    <div class="row wrap">
+                        <div class="col-lg-12">
+                            <div id="contactUsAlert" class="alert alert-success" role="alert">
+                                Thanks, we'll be in touch soon.
+                            </div>
+                            <form id="contactForm" action="" method="post">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label for="name">Full Name</label>
+                                        <input id="name" name="contactUsFullName" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input id="email" name="contactUsEmail" type="email" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control" id="message" name="contactUsMessage" rows="6" required></textarea>
+                                    </div>
+                                </fieldset>
+                                <button id="submitContactUs" type="submit" class="btn btn-primary submit">Submit form</button>                    
+                            </form>
+                    
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
