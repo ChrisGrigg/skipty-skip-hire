@@ -159,6 +159,11 @@ ion-icon {
 	border-bottom: 2px solid #e7e7e7;
 }
 
+.logged-in {
+    color: green;
+}
+
+  
 /* FORM CONFIGURATION */
 
 input {

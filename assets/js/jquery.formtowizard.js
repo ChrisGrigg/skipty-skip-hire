@@ -151,7 +151,6 @@
                 if( options.validateBeforeNext(element, $("#" + stepName)) === true ) {
                     $("#" + stepName).hide();
                     $("#step" + (i + 1)).show();
-                    //if (i + 2 == count)
                     selectStep(i + 1);
                 }
 
@@ -181,7 +180,7 @@
 
         function bindYardBtns(i) {
             var stepName = 'step' + i;
-            $("#4yard, #6yard, #8yard, #12yard").bind( "click", function(e) {
+            $("#4yard, #6yard, #8yard, #12yard").bind( "click", function(_) {
                 $("#" + stepName).hide();
                 $("#step" + (i + 1)).show();
                 selectStep(i + 1);

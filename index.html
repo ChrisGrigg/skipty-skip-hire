@@ -69,8 +69,16 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#"><img src="./assets/img/SkiptySkipHireLogoSmall.jpg" /></a>
-        <div class="d-flex pl-5 pt-1">
-            <h4>Book online below or call 01256 643 641</h4>
+        <div class="d-flex flex-column pl-5 pt-1">
+            <a type="button" class="btn btn-green py-1 px-3" href="tel:03330608062">
+                <div style="font-weight: 300;font-size: 14px;line-height: 1;">
+                    Book Online Below or Call
+                </div>
+                01256 643 641
+            </a>
+            <div>
+                <span class="logged-in">●</span> Lines open: 8am - 6pm (Mon to Sat)
+            </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
@@ -191,12 +199,13 @@
                                 <fieldset>
                                     <legend>Quote Summary</legend>
                                     <h5 class="mt-4">Great that will be <b id="totalPrice"></b></h5>
+                                    <img src="./assets/img/secure-stripe-payment.png" class="w-50 mt-5" />
                                 </fieldset>
                                 <div class="spinner-border text-primary" 
                                     id="spinner" role="status">
                                     <span class="sr-only">Loading...</span>
                                 </div>
-                                <button id="saveAccount" type="submit" class="btn btn-primary submit">Submit form</button>                    
+                                <button id="saveAccount" type="submit" class="btn btn-primary submit">Pay and Submit</button>                    
                             </form>
                     
                         </div>
