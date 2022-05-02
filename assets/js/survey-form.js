@@ -4,6 +4,9 @@
   let price = 0;
   let skipType = '';
 
+  // resolve bootstrap conflict with Optimonk
+  var bsModal = $.fn.modal.noConflict();
+
   // ********** form to wizard ********** //
   const $signupForm = $("#signupForm");
   $signupForm.validate({
