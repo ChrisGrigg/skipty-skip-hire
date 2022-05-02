@@ -274,11 +274,8 @@ input {
 }
 
 .header-title {
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
+    position: relative;
+    left: 10%;
 }
 
 #skip {
@@ -424,3 +421,15 @@ h2.bold {
 .error { color: #b33; }
 #progress { position: relative; height: 5px; background-color: #eee; margin-bottom: 20px; }
 #progress-complete { border: 0; position: absolute; height: 5px; min-width: 10px; background-color: #337ab7; transition: width .2s ease-in-out; }
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+}
