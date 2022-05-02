@@ -290,13 +290,12 @@ input {
     margin-bottom: 10px;
 }
 
-#skip .skip-image {
-    width: 250px;
-}
-
 #skip .yard-button {
-    position: relative;
-    bottom: 80px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 #about {
