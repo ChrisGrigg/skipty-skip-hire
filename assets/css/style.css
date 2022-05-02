@@ -290,7 +290,7 @@ input {
 #skip .yard-button {
     position: absolute;
     top: 85%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
@@ -431,5 +431,11 @@ h2.bold {
         left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    #skip .yard-button {
+        left: 50%;
     }
 }
