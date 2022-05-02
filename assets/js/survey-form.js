@@ -2,6 +2,7 @@
   "use strict";
 
   let price = 0;
+  let skipType = '';
 
   // ********** form to wizard ********** //
   const $signupForm = $("#signupForm");
@@ -10,6 +11,8 @@
     submitHandler: function (form) {
       showSpinner();
       const formData = new FormData();
+
+      formData.append("skipType", skipType);
       formData.append(
         "wasteType",
         document.querySelector('select[name="wasteType"]').value
@@ -17,6 +20,14 @@
       formData.append(
         "skipDate",
         document.querySelector('input[name="skipDate"]').value
+      );
+      formData.append(
+        "fullName",
+        document.querySelector('input[name="fullName"]').value
+      );
+      formData.append(
+        "email",
+        document.querySelector('input[name="email"]').value
       );
       formData.append(
         "address1",
@@ -87,6 +98,8 @@
   });
 
   $('input[name="skipDate"]').daterangepicker({
+    startDate: moment().startOf('date'),
+    endDate: moment().startOf('date').add(2, 'weeks'),
     locale: {
       format: "DD/MM/YY",
     },
@@ -95,21 +108,25 @@
   $("#4yard").bind("click", function (e) {
     price = 1;
     $("#totalPrice").text(`£${price}`);
+    skipType = '4yard';
   });
 
   $("#6yard").bind("click", function (e) {
     price = 1;
     $("#totalPrice").text(`£${price}`);
+    skipType = '6yard';
   });
 
   $("#8yard").bind("click", function (e) {
     price = 1;
     $("#totalPrice").text(`£${price}`);
+    skipType = '8yard';
   });
 
   $("#12yard").bind("click", function (e) {
     price = 1;
     $("#totalPrice").text(`£${price}`);
+    skipType = '12yard';
   });
 
   function hideSpinner() {

@@ -70,7 +70,7 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <a href="#"><img src="./assets/img/SkiptySkipHireLogoSmall.jpg" /></a>
         <div class="d-flex flex-column pl-5 pt-1">
-            <a type="button" class="btn btn-green py-1 px-3" href="tel:03330608062">
+            <a type="button" class="btn btn-green py-1 px-3" href="tel:01256643641">
                 <div style="font-weight: 300;font-size: 14px;line-height: 1;">
                     Book Online Below or Call
                 </div>
@@ -80,8 +80,11 @@
                 <span class="logged-in">●</span> Lines open: 8am - 6pm (Mon to Sat)
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+        <div class="header-title">
+            <h1>Skipty Skip Hire</h1>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#skip">Book a Skip</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
@@ -95,12 +98,9 @@
     <div id="h">
         <div class="background-overlay">
             <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <h1 class="mt-4">Skipty Skip Hire</h1>
-                </div>
                 <div class="row">
                     <div class="col-md-6 header-body">
-                        <h1>Have your skip delivered within 24 hours anywhere in the UK</h1>
+                        <h1>Have your skip delivered within 48 hours anywhere in the UK</h1>
                         <p>* subject to availability</p>
                         <a class="btn btn-conf btn-green text-center" href="#skip">
                             Book a Skip
@@ -141,19 +141,19 @@
                                 <fieldset class="d-flex flex-row">
                                     <div class="skip-image">
                                         <img src="./assets/img/skips/four-yard.png" />
-                                        <button id="4yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                        <button id="4yard" name="4yard" href="#" class="btn btn-primary yard-button">Select</button>
                                     </div>
                                     <div class="skip-image">
                                         <img src="./assets/img/skips/six-yard.png" />
-                                        <button id="6yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                        <button id="6yard" name="6yard"  href="#" class="btn btn-primary yard-button">Select</button>
                                     </div>
                                     <div class="skip-image">
                                         <img src="./assets/img/skips/eight-yard.png" />
-                                        <button id="8yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                        <button id="8yard" name="8yard"  href="#" class="btn btn-primary yard-button">Select</button>
                                     </div>
                                     <div class="skip-image">
                                         <img src="./assets/img/skips/twelve-yard.png" />
-                                        <button id="12yard" href="#" class="btn btn-primary yard-button">Select</button>
+                                        <button id="12yard" name="12yard"  href="#" class="btn btn-primary yard-button">Select</button>
                                     </div>
                                 </fieldset>
                         
@@ -162,18 +162,34 @@
                                         <label for="wasteType" class="col-sm-2 control-label">Waste type</label>
                                         <select id="wasteType" name="wasteType" class="form-control">
                                             <option value="mixed">Mixed Waste</option>
-                                            <option value="inert">Inert - Bricks / Rubble / Concrete / Soil</option>
+                                            <option value="bricks"> Bricks / Rubble / Concrete / Soil</option>
                                             <option value="garden">Garden Waste and Shrubbery</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="skipDate">Skip's Delivery Date</label>
+                                        <label for="skipDate">Skip Delivery and Pick up Date</label>
                                         <input id="skipDate" name="skipDate" class="form-control" required />
                                     </div>
+                                    <div class="form-group mt-4">
+                                        <input type="checkbox" id="permitRequired" name="permitRequired" checked required>
+                                        <label for="permitRequired">The skip will be put on private property thus a road permit not required</label>
+                                    </div>  
                                 </fieldset>
                         
                                 <fieldset>
                                     <legend>Skip's Delivery Address</legend>
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name</label>
+                                        <input id="fullName" name="fullName" type="text" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input id="email" name="email" type="email" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address1">Address 1</label>
+                                        <input id="address1" name="address1" type="text" class="form-control" required />
+                                    </div>
                                     <div class="form-group">
                                         <label for="address1">Address 1</label>
                                         <input id="address1" name="address1" type="text" class="form-control" required />
@@ -624,6 +640,9 @@
     <script src="./assets/js/survey-form.js" defer></script>
     <script type="text/javascript" src="https://checkoutpage.co/js/overlay.js" defer></script>
     <script src="//code.tidio.co/ygvhtahl4fuuhvxax9tee507nkqwez9e.js" async></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <script type="text/javascript">
         (function(e,a){
             var t,r=e.getElementsByTagName("head")[0],c=e.location.protocol;
@@ -632,8 +651,6 @@
             t.src=c+"//front.optimonk.com/public/"+a+"/js/preload.js";r.appendChild(t);
         })(document,"160224");
     </script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </body>
 
 <!-- Modals -->

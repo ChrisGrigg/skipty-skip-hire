@@ -132,6 +132,11 @@ ion-icon {
 	color: gold;
 }
 
+input[type='checkbox'] {
+    min-height: 0;
+    margin-right: 10px;
+}
+
 /* Bootstrap Modifications */
 .navbar-default {
 	background-color: #ffffff;
@@ -266,6 +271,14 @@ input {
 #h p {
     margin-bottom: 40px;
 	color: white;
+}
+
+.header-title {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
 }
 
 #skip {
