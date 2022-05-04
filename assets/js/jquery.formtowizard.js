@@ -173,11 +173,6 @@
         /******************** End Private Methods ********************/
 
         /******************** Start Custom Code ********************/
-        // $("#step0Next").hide();
-        // $("#4yard").bind( "click", function(e) {
-
-        // });
-
         function bindYardBtns(i) {
             var stepName = 'step' + i;
             $("#4yard, #6yard, #8yard, #12yard").bind( "click", function(_) {

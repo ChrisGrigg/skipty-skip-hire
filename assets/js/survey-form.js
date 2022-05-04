@@ -101,8 +101,8 @@
   });
 
   $('input[name="skipDate"]').daterangepicker({
-    startDate: moment().startOf('date'),
-    endDate: moment().startOf('date').add(2, 'weeks'),
+    startDate: moment().startOf('date').add(2, 'days'),
+    endDate: moment().startOf('date').add(2, 'weeks').add(2, 'days'),
     locale: {
       format: "DD/MM/YY",
     },
@@ -142,7 +142,7 @@
   }
   hideSpinner();
 
-  // ********** contact us form ********** //
+// ********** CONTACT US FORM ********** //
   const $contactForm = $("#contactForm");
   $contactForm.validate({
     errorElement: "em",
