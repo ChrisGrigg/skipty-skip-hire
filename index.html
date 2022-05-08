@@ -183,35 +183,31 @@
                                 <fieldset>
                                     <legend>Skip's Delivery Address</legend>
                                     <div class="form-group">
-                                        <label for="fullName">Full Name</label>
+                                        <label for="fullName">Full Name *</label>
                                         <input id="fullName" name="fullName" type="text" class="form-control" required />
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email</label>
+                                        <label for="email">Email *</label>
                                         <input id="email" name="email" type="email" class="form-control" required />
                                     </div>
                                     <div class="form-group">
-                                        <label for="address1">Address 1</label>
-                                        <input id="address1" name="address1" type="text" class="form-control" required />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address1">Address 1</label>
+                                        <label for="address1">Address 1 *</label>
                                         <input id="address1" name="address1" type="text" class="form-control" required />
                                     </div>
                                     <div class="form-group">
                                         <label for="address2">Address 2</label>
-                                        <input id="address2" name="address2" type="text" class="form-control" required />
+                                        <input id="address2" name="address2" type="text" class="form-control" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="city">City</label>
+                                        <label for="city">City *</label>
                                         <input id="city" name="city" type="text" class="form-control" required />
                                     </div>
                                     <div class="form-group">
-                                        <label for="county">County</label>
+                                        <label for="county">County *</label>
                                         <input id="county" name="county" type="text" class="form-control" required />
                                     </div>
                                     <div class="form-group">
-                                        <label for="postcode">Post Code</label>
+                                        <label for="postcode">Post Code *</label>
                                         <input id="postcode" name="postCode" type="text" class="form-control" required />
                                     </div>
                                 </fieldset>
@@ -219,7 +215,7 @@
                                 <fieldset>
                                     <legend>Quote Summary</legend>
                                     <h5 class="mt-4">Great that will be <b id="totalPrice"></b></h5>
-                                    <img src="./assets/img/secure-stripe-payment.png" class="w-50 mt-5" />
+                                    <img src="./assets/img/secure-stripe-payment.png" class="stripe-payment mt-5" />
                                 </fieldset>
                                 <div class="spinner-border text-primary" 
                                     id="spinner" role="status">

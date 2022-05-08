@@ -382,6 +382,10 @@ h2.bold {
 	font-weight: 900;
 }
 
+.stripe-payment {
+    width: 100%;
+}
+
 #contact {
     padding: 30px 15px;
 	background: #F9CD48;
@@ -431,6 +435,10 @@ h2.bold {
         left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
+    }
+
+    .stripe-payment {
+        width: 50%;
     }
 }
 
