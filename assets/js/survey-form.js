@@ -1,8 +1,10 @@
 (function () {
   "use strict";
 
-  let price = 0;
-  let skipType = '';
+  const skipObj = {
+    price: 0,
+    type: '',
+  }
 
   // resolve bootstrap conflict with Optimonk
   var bsModal = $.fn.modal.noConflict();
@@ -15,7 +17,7 @@
       showSpinner();
       const formData = new FormData();
 
-      formData.append("skipType", skipType);
+      formData.append("skipType", skipObj.type);
       formData.append(
         "wasteType",
         document.querySelector('select[name="wasteType"]').value
@@ -54,7 +56,7 @@
       );
       formData.append(
         "totalPrice",
-        price
+        skipObj.price
       );
 
       fetch("https://getform.io/f/115e7883-4e74-42b6-9f18-0591443cb828", {
@@ -69,7 +71,7 @@
           ) {
             window.checkoutPage.open({
               seller: "skipty-skip-hire",
-              checkout: "Four-yard",
+              checkout: skipObj.type,
               query: { testing: "1" },
             });
           }
@@ -109,27 +111,27 @@
   });
 
   $("#4yard").bind("click", function (e) {
-    price = 1;
-    $("#totalPrice").text(`£${price}`);
-    skipType = '4yard';
+    skipObj.price = 100;
+    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.type = 'four-yard';
   });
 
   $("#6yard").bind("click", function (e) {
-    price = 1;
-    $("#totalPrice").text(`£${price}`);
-    skipType = '6yard';
+    skipObj.price = 200;
+    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.type = 'six-yard';
   });
 
   $("#8yard").bind("click", function (e) {
-    price = 1;
-    $("#totalPrice").text(`£${price}`);
-    skipType = '8yard';
+    skipObj.price = 300;
+    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.type = 'eight-yard';
   });
 
   $("#12yard").bind("click", function (e) {
-    price = 1;
-    $("#totalPrice").text(`£${price}`);
-    skipType = '12yard';
+    skipObj.price = 400 ;
+    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.type = 'twelve-yard';
   });
 
   function hideSpinner() {
