@@ -161,7 +161,7 @@
         document.querySelector('textarea[name="contactUsMessage"]').value
       );
 
-      fetch("https://getform.io/f/115e7883-4e74-42b6-9f18-0591443cb828", {
+      fetch("https://getform.io/f/05fe9989-3cf3-44c4-bc1f-7c4454ee2e3f", {
         method: "POST",
         body: formData,
       })
