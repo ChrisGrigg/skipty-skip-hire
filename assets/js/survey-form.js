@@ -111,26 +111,26 @@
   });
 
   $("#4yard").bind("click", function (e) {
-    skipObj.price = 100;
-    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.price = 238.80;
+    $("#totalPrice").text(`£${skipObj.price.toFixed(2)}`);
     skipObj.type = 'four-yard';
   });
 
   $("#6yard").bind("click", function (e) {
-    skipObj.price = 200;
-    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.price = 286.80;
+    $("#totalPrice").text(`£${skipObj.price.toFixed(2)}`);
     skipObj.type = 'six-yard';
   });
 
   $("#8yard").bind("click", function (e) {
-    skipObj.price = 300;
-    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.price = 358.80;
+    $("#totalPrice").text(`£${skipObj.price.toFixed(2)}`);
     skipObj.type = 'eight-yard';
   });
 
   $("#12yard").bind("click", function (e) {
-    skipObj.price = 400 ;
-    $("#totalPrice").text(`£${skipObj.price}`);
+    skipObj.price = 432.00 ;
+    $("#totalPrice").text(`£${skipObj.price.toFixed(2)}`);
     skipObj.type = 'twelve-yard';
   });
 
