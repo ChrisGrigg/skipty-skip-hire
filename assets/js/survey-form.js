@@ -72,7 +72,7 @@
             window.checkoutPage.open({
               seller: "skipty-skip-hire",
               checkout: skipObj.type,
-              query: { testing: "1" },
+              query: { },
             });
           }
           document.getElementById('signupForm').reset();
